@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music Homepage</title>
+	<link rel="stylesheet"  href="../Music/music.css">
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<h1>LOGO</h1>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">PORTFOLIO</a></li>
+				<li><a href="#">CONTACT</a></li>
+				<li><a href="#">FOLLOW US</a></li>
+			</ul>
+		</div>
+	<div class="content">	
+	    <div class="left-col">
+			<h3>THE<br> REAL<br> SOUND</h3>
+		</div>
+		<div class="right-col">
+			<p>Click to listen to the music</p>
+			<img src="play.png" id="icon">
+        </div>
+	</div>
+	</div>
+	 <audio id="mySong">
+		<source src=" Ikson.mp3" type="audio/mp3">
+     </audio>	
+<script>
+		var mySong = document.getElementById("mySong");
+		var icon = document.getElementById("icon"); 
+
+		icon.onclick = function(){
+			if(mySong.paused){
+				mySong.play();
+				icon.src = "pause.png";
+					}
+			else{
+				mySong.pause();
+				icon.src= "play.png";
+					}
+			}
+			if(typeof mySong.loop == 'boolean'){
+			mySong.loop = true;
+		}
+</script>
+</body>
+</html>
